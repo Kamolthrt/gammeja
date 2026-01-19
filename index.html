@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เกมฝึกคำศัพท์ภาษาญี่ปุ่น</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+      padding-top: 40px;
+    }
+    .box {
+      background: white;
+      width: 300px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      margin: 8px 0;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h2>📘 เกมฝึกคำศัพท์ภาษาญี่ปุ่น</h2>
+    <h1 id="question">ねこ</h1>
+
+    <button onclick="checkAnswer('แมว')">แมว</button>
+    <button onclick="checkAnswer('หมา')">หมา</button>
+    <button onclick="checkAnswer('ปลา')">ปลา</button>
+
+    <p id="result"></p>
+    <p>คะแนน: <span id="score">0</span></p>
+  </div>
+
+  <script>
+    let score = 0;
+
+    function checkAnswer(answer) {
+      if (answer === 'แมว') {
+        document.getElementById("result").innerText = "✅ ถูกต้อง!";
+        score++;
+      } else {
+        document.getElementById("result").innerText = "❌ ผิด!";
+      }
+      document.getElementById("score").innerText = score;
+    }
+  </script>
+
+</body>
+</html>
